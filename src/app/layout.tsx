@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ["latin"] });
  * Root layout component that wraps all pages
  */
 export const metadata: Metadata = {
-  title: "Your Name | Creative Developer",
-  description: "Welcome to my portfolio - where creativity meets technology",
+  title: 'Sirjan Singh | Portfolio',
+  description: 'Personal portfolio website showcasing my projects, skills, and experience.',
 };
 
 export default function RootLayout({
