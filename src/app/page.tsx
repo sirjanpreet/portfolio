@@ -172,7 +172,7 @@ export default function Home() {
                 transition={{ delay: 0.8 }}
               >
                 <p className="text-gray-300 text-lg leading-relaxed">
-                Hey there! I'm Sirjan Singh. Feel free to look around and get to know me.
+                Hey there! I&apos;m Sirjan Singh. Feel free to look around and get to know me.
                 </p>
               </motion.div>
 
@@ -279,13 +279,13 @@ export default function Home() {
                   transition={{ duration: 0.8 }}
                 >
                   <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  I'm a Computer Science student at the University of Washington, 
-                 passionate about coding and problem-solving. 
-                  I've worked on projects ranging from 
-                  machine learning and cybersecurity to full-stack development.
-                  I value continuous learning and enjoy exploring 
-                  cutting-edge technologies that drive meaningful change. Outside of tech,
-                   I'm dedicated to giving back and applying my skills
+                    I&apos;m a Computer Science student at the University of Washington, 
+                    passionate about coding and problem-solving. 
+                    I&apos;ve worked on projects ranging from 
+                    machine learning and cybersecurity to full-stack development.
+                    I value continuous learning and enjoy exploring 
+                    cutting-edge technologies that drive meaningful change. Outside of tech,
+                    I&apos;m dedicated to giving back and applying my skills
                     to make a positive impact in the community.
                   </p>
                 </motion.div>
