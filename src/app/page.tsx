@@ -68,7 +68,7 @@ const projects: Project[] = [
   },
   {
     title: "Multithreaded Web Server",
-    description: "A modern portfolio website built with Next.js and Three.js",
+    description: "A multithreaded web server that handles multiple clients concurrently",
     githubUrl: "https://github.com/sirjanpreet/multithreaded-webserver",
     technologies: ["C", "C++", "POSIX Threads", "WebSockets"]
   }
