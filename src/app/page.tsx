@@ -54,23 +54,24 @@ const roles: string[] = [
 ];
 
 const projects: Project[] = [
+ 
   {
-    title: "Court Connect",
-    description: "A web application designed to connect sport-enthusiasts with local courts and players",
-    githubUrl: "https://github.com/sirjanpreet/connect-court",
-    technologies: ["React", "TypeScript", "Flask", "MongoDB"]
-  },
-  {
-    title: "Stock Simulator",
-    description: "Practice trading stocks with this simulation with real-world data!",
-    githubUrl: "https://github.com/sirjanpreet/StockSimulator",
-    technologies: ["Python", "Flask", "IEX API", "Tailwind CSS"]
+    title: "Stock Sentiment Analysis",
+    description: "Real-Time analysis of stock market sentiment!",
+    githubUrl: "https://github.com/sirjanpreet/stock-sentiment",
+    technologies: ["Python", "Transformers", "Vader Sentiment", "MongoDB", "Flask"]
   },
   {
     title: "Multithreaded Web Server",
     description: "A multithreaded web server that handles multiple clients concurrently",
     githubUrl: "https://github.com/sirjanpreet/multithreaded-webserver",
     technologies: ["C", "C++", "POSIX Threads", "WebSockets"]
+  },
+  {
+    title: "Court Connect",
+    description: "A web application designed to connect sport-enthusiasts with local courts and players",
+    githubUrl: "https://github.com/sirjanpreet/connect-court",
+    technologies: ["React", "TypeScript", "Flask", "MongoDB"]
   }
 ];
 
