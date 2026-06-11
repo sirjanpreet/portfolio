@@ -40,7 +40,7 @@ export const useContactForm = () => {
           from_email: formData.email,
           message: formData.message,
         },
-        'KsufhFeSwMdKGLeVk' // You'll need to replace this with your EmailJS public key
+        'M3NyDf22DcS4Z9_rb' // EmailJS public key
       );
       
       setSubmitStatus('success');
