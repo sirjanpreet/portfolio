@@ -695,7 +695,10 @@ export default function Home() {
                     animate={{ opacity: 1 }}
                     className="text-red-400 text-center"
                   >
-                    Something went wrong. Please try again.
+                    Something went wrong. Please email me directly at{' '}
+                    <a href="mailto:sirjan1@cs.washington.edu" className="underline hover:text-red-300">
+                      sirjan1@cs.washington.edu
+                    </a>
                   </motion.p>
                 )}
               </motion.form>

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import emailjs from '@emailjs/browser';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 interface FormData {
   name: string;
@@ -50,7 +50,8 @@ export const useContactForm = () => {
         message: '',
       });
     } catch (error) {
-      console.error('Error sending email:', error);
+      const detail = error instanceof EmailJSResponseStatus ? `${error.status} ${error.text}` : error;
+      console.error('Error sending email:', detail);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
