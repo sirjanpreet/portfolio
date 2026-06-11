@@ -8,11 +8,16 @@ import { useScrollTo } from '@/hooks/useScrollTo';
 const navItems = [
   { name: 'Home', href: 'home' },
   { name: 'About', href: 'about' },
+  { name: 'Experience', href: 'experience' },
   { name: 'Projects', href: 'projects' },
   { name: 'Contact', href: 'contact' },
 ];
 
-export default function Navigation() {
+interface NavigationProps {
+  onTerminalOpen?: () => void;
+}
+
+export default function Navigation({ onTerminalOpen }: NavigationProps) {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const scrollTo = useScrollTo();
@@ -50,8 +55,8 @@ export default function Navigation() {
             >
               Sirjan Singh
             </motion.div>
-            
-            <div className="hidden md:flex space-x-8">
+
+            <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
                 <motion.button
                   key={item.name}
@@ -63,6 +68,17 @@ export default function Navigation() {
                   {item.name}
                 </motion.button>
               ))}
+              {onTerminalOpen && (
+                <motion.button
+                  onClick={onTerminalOpen}
+                  className="px-3 py-1.5 font-mono text-sm text-purple-300 border border-purple-500/40 rounded-md hover:bg-purple-500/10 hover:border-purple-400 transition-colors duration-200"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  title="Open terminal (or press `)"
+                >
+                  &gt;_
+                </motion.button>
+              )}
             </div>
 
             {/* Mobile menu button */}
@@ -87,11 +103,12 @@ export default function Navigation() {
         </div>
       </motion.nav>
 
-      <MobileMenu 
-        isOpen={isMobileMenuOpen} 
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
         onNavClick={handleNavClick}
+        onTerminalOpen={onTerminalOpen}
       />
     </>
   );
-} 
+}

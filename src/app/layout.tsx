@@ -1,15 +1,34 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jbmono",
+});
 
 /**
  * Root layout component that wraps all pages
  */
 export const metadata: Metadata = {
-  title: 'Sirjan Singh | Portfolio',
-  description: 'Personal portfolio website showcasing my projects, skills, and experience.',
+  title: "Sirjan Singh | Systems & ML Engineer",
+  description:
+    "CS @ University of Washington. Incoming SDE Intern @ AWS and ML Engineer Intern @ Expedia Group. Systems programming, distributed systems, and machine learning.",
+  keywords: [
+    "Sirjan Singh",
+    "Software Engineer",
+    "Systems Programming",
+    "Machine Learning",
+    "University of Washington",
+    "Distributed Systems",
+  ],
+  openGraph: {
+    title: "Sirjan Singh | Systems & ML Engineer",
+    description:
+      "CS @ University of Washington. Incoming SDE Intern @ AWS and ML Engineer Intern @ Expedia Group.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -19,7 +38,7 @@ export default function RootLayout({
 }): React.ReactElement {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-black text-white`}>
+      <body className={`${inter.className} ${jetbrainsMono.variable} bg-black text-white`}>
         {children}
       </body>
     </html>

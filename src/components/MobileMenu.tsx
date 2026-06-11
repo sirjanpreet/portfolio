@@ -6,16 +6,18 @@ interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
   onNavClick: (href: string) => void;
+  onTerminalOpen?: () => void;
 }
 
 const navItems = [
   { name: 'Home', href: 'home' },
   { name: 'About', href: 'about' },
+  { name: 'Experience', href: 'experience' },
   { name: 'Projects', href: 'projects' },
   { name: 'Contact', href: 'contact' },
 ];
 
-export default function MobileMenu({ isOpen, onClose, onNavClick }: MobileMenuProps) {
+export default function MobileMenu({ isOpen, onClose, onNavClick, onTerminalOpen }: MobileMenuProps) {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -67,10 +69,22 @@ export default function MobileMenu({ isOpen, onClose, onNavClick }: MobileMenuPr
                   {item.name}
                 </motion.button>
               ))}
+              {onTerminalOpen && (
+                <motion.button
+                  onClick={() => {
+                    onClose();
+                    onTerminalOpen();
+                  }}
+                  className="block text-xl font-mono text-purple-300 hover:text-purple-400 transition-colors w-full text-left"
+                  whileHover={{ x: 10 }}
+                >
+                  &gt;_ Terminal
+                </motion.button>
+              )}
             </nav>
           </motion.div>
         </>
       )}
     </AnimatePresence>
   );
-} 
+}
